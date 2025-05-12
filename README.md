@@ -1,105 +1,74 @@
-# 🔧 N-Day C Project Sprint
+# 🧠 C From Scratch — My Systems Programming Playground
 
-A 40-day solo sprint building real-world C tools — from Markdown converters and math engines to low-level memory allocators and ICMP networking. No frameworks. No hand-holding. Just raw C and problem-solving.
+Welcome. This repo is my personal journey to master the C programming language — from raw syntax to real-world systems-level projects. It’s not a course, it’s not a tutorial site — it’s just me, building stuff, solving problems, and learning by doing.
 
-Each project was built in under a day, with stretch goals for deeper challenges. All code is 100% C unless otherwise noted (Node.js used only for wrappers or bridges).
-
----
-
-## ✅ Projects
-
-### 📝 CLI Tools & File Converters
-
-- Markdown to HTML Converter
-- Text Diff Tool (like `diff`)
-- CSV to JSON Converter
-- Simple Markdown Terminal Viewer
-- JSON Pretty Printer
-- Encrypted Notes CLI
-- Image to ASCII Converter
+If you stumbled here from my resume or GitHub, here’s what this is all about.
 
 ---
 
-### 📊 Data Parsing & Evaluators
+## 🧭 Why This Exists
 
-- INI Config Editor
-- Math Expression Evaluator (Shunting Yard)
-- JSON REST API Server (Node.js + C Bridge)
-- Naive Bayes Text Classifier
+After years of working higher up the stack — web, frontend, APIs — I decided to go deeper.
 
----
+This repo documents my hands-on exploration of:
 
-### 📚 Data Structures
+- 💾 How memory *really* works
+- 🧵 How threads and processes coordinate
+- ⚙️ How parsers, allocators, and shells tick
+- 📚 Classic data structures — rebuilt from scratch
+- 🌐 Sockets, protocols, and low-level networking
 
-- Trie-based Word Search
-- LRU Cache Simulator
-- Memory Allocator Simulator
-
----
-
-### ⏱️ Productivity & Desktop
-
-- Stopwatch with Lap Tracking
-- Desktop Pomodoro Timer
-- Clipboard Text Copier
+I’m using **pure C** (no frameworks, no sugarcoating) and working on bite-sized but challenging projects. It’s half DSA training, half systems playground.
 
 ---
 
-### 🔧 System Utilities
+## 🔧 What's Inside
 
-- File Watcher (inotify-style)
-- Hexdump Viewer
+### 🧱 Core Topics
 
----
+- Pointers, arrays, and memory management
+- Manual memory allocation (`malloc`, `free`, custom allocators)
+- File I/O, system calls, and working with the OS
+- TCP/UDP socket programming
+- Concurrency using pthreads
+- Debugging, profiling, and optimizing C code
 
-### 🌐 Networking & Protocols
+### 🛠️ Real-World Projects
 
-- Crypto Price Tracker (CoinGecko API)
-- Ping Tool (ICMP Echo CLI)
-- Port Scanner
-- Local Peer Discovery via UDP
+> All built in 100% C (unless bridged via Node.js or Bash for wrappers)
 
----
+- Markdown to HTML Converter  
+- CSV to JSON CLI Tool  
+- Port Scanner & Ping Utility  
+- Stopwatch, Pomodoro Timer (TUI/CLI)  
+- Memory Allocator Simulator  
+- Naive Bayes Text Classifier  
+- TOTP Authenticator  
+- JSON Pretty Printer  
+- Local Peer Discovery via UDP  
 
-### 🔐 Security & Crypto
-
-- TOTP Authenticator (RFC 6238)
-- Encrypted Notes CLI (XOR/AES)
-
----
-
-### 🧠 AI & Algorithms
-
-- Math Expression Evaluator
-- Naive Bayes Classifier
-
----
-
-## 🛠️ Why This Sprint?
-
-To master:
-
-- C memory handling and pointer logic
-- File I/O and system calls
-- Building parsers and interpreters
-- Working with sockets and protocols
-- Creating CLI-first tools people actually use
+> Full list in `/projects/`
 
 ---
 
-## 🔄 Future Plans
+## 🧠 What I’m Working Toward
 
-- Finish remaining days (Days 30–40)
-- Add Makefile-based builds and test cases
-- Document performance trade-offs and optimizations
-- Create interactive TUI wrappers for key tools
-
----
-
-## 📬 Contact & Feedback
-
-Want to collab, hire, or suggest a build? Open an issue or ping me.
+- Becoming dangerous with C and systems programming
+- Building muscle memory with data structures & algorithms in C
+- Writing tools that don’t just work — they *teach me something*
+- Laying the foundation for backend/devtools/infra roles
 
 ---
 
-> Built with C and caffeine. 🧠🔥
+---
+
+## 📬 Say Hey
+
+Curious about the repo? Want to collab, hire, or ask me about a project?
+
+**→ [Reach out here](https://github.com/your-username)** or open an issue.
+
+---
+
+> All projects powered by curiosity, caffeine, and `gdb`.  
+> No frameworks. No shortcuts. Just C. 🔥
