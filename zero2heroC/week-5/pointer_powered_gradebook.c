@@ -48,6 +48,7 @@ int return_average(int *arr, int number_of_students){
         result += *(arr + index);
         index++;
     }
+    
 
     return result / number_of_students;
 }
