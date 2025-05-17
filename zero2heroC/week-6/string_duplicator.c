@@ -5,20 +5,13 @@
 char *duplicate(const char *s);
 
 int main(){
-    int index = 0;
-    int total = 0;
-
     const char string[] = "hello";
     
     char *dup = duplicate(string);
     
-    // while (*dup != '\0')
-    // {
-    //     printf("%c", *dup);
-    //     *dup++;
-    // }
+    printf("%s", dup);
     
-    // free(dup);
+    free(dup);
     return 0;
 }
 
@@ -30,23 +23,18 @@ char *duplicate(const char *s){
     while (*c != '\0')
     {
         total += 1;
-        *c++;    
+        c++;    
     }
 
     char *new_string = malloc(total * sizeof(char) + 1);
     
     const char *new_c = s;
 
-    while (*new_c != '\0')
+    while (index <= total)
     {
-        *new_string = *new_c;
-        new_c++;
-        
-        // if(*new_c == '\0'){
-        //     *new_string = *new_c;
-        // }
+        *(new_string + index) = *(new_c + index);
+        index++;
     }
     
-    printf("%c 2.%c\n", *new_c, *new_string);
     return new_string;
 }
