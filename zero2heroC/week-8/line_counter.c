@@ -13,17 +13,15 @@ int main(){
         printf("Cannot open file!\n");
     } else
     {
-        
-        // while(feof(file) != 1){
-        //     if (fgetc(file) == '\n')
-        //     {
-        //         counter++;
-        //     }
-            
-        //     file++;
-        // }
-
-        printf("File has %d lines", counter);
+        char c;
+        while((c = fgetc(file)) != EOF)
+        { 
+            if (c == '\n')
+            {
+                counter++;
+            }
+        }
+        printf("\nFile has %d lines\n", counter);
         fclose(file);
     }
 }
