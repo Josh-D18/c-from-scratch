@@ -15,8 +15,12 @@
 #include <string.h>
 #include <signal.h>
 
-int main(){
+void child_handler(int sig);
 
+
+
+int main(){
+    signal(SIGCHLD, child_handler);
     while (1)
     {
         
@@ -61,6 +65,7 @@ int main(){
         
         case 2:{
             pid_t pid = fork();
+
             if (pid == -1)
             {
                 perror("Error creating new process!\n\n");
@@ -68,12 +73,9 @@ int main(){
             {
                 printf("Before sleep...\n");
                 sleep(10);
-                printf("After sleep...\n");
+                printf("\nAfter sleep...\n");
                 exit(0);
-            }else 
-            {
-                wait(NULL);
-            }
+            } 
             break;
         }
 
@@ -86,5 +88,15 @@ int main(){
             printf("Please enter a valid option!\n\n");
             break;
         }
+    }
+}
+
+void child_handler(int sig){
+    pid_t pid;
+    int status;
+    
+    while ((pid = waitpid(-1, &status, WNOHANG)) > 0)
+    {
+        printf("\nChild %d Has Been Terminated!\n", pid);
     }
 }
